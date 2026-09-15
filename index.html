@@ -3,42 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Minimalist Page</title>
-    <script src="https://tailwindcss.com"></script>
-    <!-- Loads crisp icons instantly without image files -->
-    <script src="https://unpkg.com"></script>
+    <title>Modern CSS Buttons</title>
+    <style>
+        /* Base setup to center things nicely on the page */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #0f172a; /* Sleek dark background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: screen;
+            height: 100vh;
+            gap: 20px;
+            margin: 0;
+        }
+
+        /* 1. THE SOLID PRIMARY BUTTON */
+        .btn-primary {
+            background-color: #4f46e5; font-weight: 600; color: white;
+            padding: 12px 24px; border: none; border-radius: 8px;
+            cursor: pointer; text-decoration: none; font-size: 16px;
+            box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+            transition: all 0.2s ease; /* Smooth animation timing */
+        }
+        /* Hover effect: darkens background and lifts slightly */
+        .btn-primary:hover {
+            background-color: #4338ca;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+        }
+
+        /* 2. THE OUTLINE SECONDARY BUTTON */
+        .btn-outline {
+            background-color: transparent; font-weight: 600; color: #94a3b8;
+            padding: 12px 24px; border: 2px solid #334155; border-radius: 8px;
+            cursor: pointer; text-decoration: none; font-size: 16px;
+            transition: all 0.2s ease;
+        }
+        /* Hover effect: changes borders and lights up text */
+        .btn-outline:hover {
+            border-color: #64748b;
+            color: #f8fafc;
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+
+        /* 3. THE SQUISHY GLOW BUTTON (High-end Startup Look) */
+        .btn-glow {
+            background: linear-gradient(135deg, #ec4899, #8b5cf6); font-weight: 600; color: white;
+            padding: 12px 28px; border: none; border-radius: 50px; /* Pill shape */
+            cursor: pointer; text-decoration: none; font-size: 16px;
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+            transition: transform 0.1s ease, box-shadow 0.2s ease;
+        }
+        .btn-glow:hover {
+            transform: scale(1.03); /* Zooms in slightly */
+            box-shadow: 0 0 30px rgba(236, 72, 153, 0.6);
+        }
+        /* Active effect: squishes down when physically clicked */
+        .btn-glow:active {
+            transform: scale(0.98);
+        }
+    </style>
 </head>
-<body class="bg-black text-zinc-400 font-sans min-h-screen flex flex-col justify-between">
+<body>
 
-    <!-- Header Navigation -->
-    <header class="max-w-4xl w-full mx-auto p-8 flex justify-between items-center">
-        <div class="text-white font-semibold tracking-wider text-lg">STUDIO_</div>
-        <a href="mailto:hello@example.com" class="text-sm text-white border border-zinc-800 hover:bg-zinc-900 px-4 py-2 rounded-full transition">Get in touch</a>
-    </header>
+    <!-- Three different buttons styled entirely with the CSS classes above -->
+    <a href="#" class="btn-primary">Get Started</a>
+    <a href="#" class="btn-outline">Learn More</a>
+    <button class="btn-glow">Launch App</button>
 
-    <!-- Main Content Minimal Hero -->
-    <main class="max-w-xl mx-auto text-center px-6 py-12">
-        <h1 class="text-4xl md:text-5xl font-normal text-white tracking-tight leading-tight mb-6">
-            Designing clean interfaces for modern engineering teams.
-        </h1>
-        <p class="text-sm text-zinc-500 max-w-sm mx-auto mb-8">
-            A minimalist portfolio built with clean semantic code, optimized typography, and responsive grid layouts.
-        </p>
-        
-        <!-- Social Icons (Using Lucide script instead of images) -->
-        <div class="flex justify-center space-x-6 text-zinc-600">
-            <a href="#" class="hover:text-white transition"><i data-lucide="github"></i></a>
-            <a href="#" class="hover:text-white transition"><i data-lucide="twitter"></i></a>
-            <a href="#" class="hover:text-white transition"><i data-lucide="linkedin"></i></a>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="text-center py-8 text-xs text-zinc-600">
-        &copy; 2026 Studio. Powered by clean code.
-    </footer>
-
-    <!-- Standard script to initialize the icons -->
-    <script>lucide.createIcons();</script>
 </body>
 </html>
