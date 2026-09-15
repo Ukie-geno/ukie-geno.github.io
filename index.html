@@ -3,27 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Modern Site</title>
-    <!-- Instant modern styling via Pico CSS -->
-    <link rel="stylesheet" href="https://jsdelivr.net">
+    <title>Modern Minimalist Page</title>
+    <script src="https://tailwindcss.com"></script>
+    <!-- Loads crisp icons instantly without image files -->
+    <script src="https://unpkg.com"></script>
 </head>
-<body>
-    <header class="container">
-        <nav>
-            <ul><li><strong>My Brand</strong></li></ul>
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+<body class="bg-black text-zinc-400 font-sans min-h-screen flex flex-col justify-between">
+
+    <!-- Header Navigation -->
+    <header class="max-w-4xl w-full mx-auto p-8 flex justify-between items-center">
+        <div class="text-white font-semibold tracking-wider text-lg">STUDIO_</div>
+        <a href="mailto:hello@example.com" class="text-sm text-white border border-zinc-800 hover:bg-zinc-900 px-4 py-2 rounded-full transition">Get in touch</a>
     </header>
-    <main class="container">
-        <section style="padding: 3rem 0; text-align: center;">
-            <h1>Hi, I'm a Web Developer 👋</h1>
-            <p>Welcome to my sleek, responsive GitHub Pages website.</p>
-            <a href="#" role="button">View My Work</a>
-        </section>
+
+    <!-- Main Content Minimal Hero -->
+    <main class="max-w-xl mx-auto text-center px-6 py-12">
+        <h1 class="text-4xl md:text-5xl font-normal text-white tracking-tight leading-tight mb-6">
+            Designing clean interfaces for modern engineering teams.
+        </h1>
+        <p class="text-sm text-zinc-500 max-w-sm mx-auto mb-8">
+            A minimalist portfolio built with clean semantic code, optimized typography, and responsive grid layouts.
+        </p>
+        
+        <!-- Social Icons (Using Lucide script instead of images) -->
+        <div class="flex justify-center space-x-6 text-zinc-600">
+            <a href="#" class="hover:text-white transition"><i data-lucide="github"></i></a>
+            <a href="#" class="hover:text-white transition"><i data-lucide="twitter"></i></a>
+            <a href="#" class="hover:text-white transition"><i data-lucide="linkedin"></i></a>
+        </div>
     </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 text-xs text-zinc-600">
+        &copy; 2026 Studio. Powered by clean code.
+    </footer>
+
+    <!-- Standard script to initialize the icons -->
+    <script>lucide.createIcons();</script>
 </body>
 </html>
